@@ -29,6 +29,9 @@ dependencies {
     annotationProcessor("io.avaje:avaje-http-javalin-generator:2.7")
 }
 
+// This doesn't seem to have any affect.
+sourceSets["main"].java.srcDir(file("build/generated/sources/annotationProcessor/java/main"))
+
 // Apply a specific Java toolchain to ease working on different environments.
 java {
     toolchain {
