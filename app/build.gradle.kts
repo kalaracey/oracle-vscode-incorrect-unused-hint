@@ -45,3 +45,14 @@ tasks.named<Test>("test") {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
 }
+
+tasks.register("sourceSets") {
+    doLast {
+        sourceSets.forEach {
+            println(it)
+            it.allSource.forEach {
+                println(it)
+            }
+        }
+    }
+}
